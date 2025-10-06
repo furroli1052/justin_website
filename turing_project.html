@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin's Portfolio Website</title>
+    <style> 
+             .nav-image-tabs {
+            display: flex;
+            width: min(600px, 90vw);
+            margin: 40px auto 20px; /* 👈 Increased top margin to 40px */
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .nav-tab-link {
+            flex: 1;
+            max-width: 180px;
+            height: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            display: block;
+            position: relative;
+        }
+
+        .nav-tab-link:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .nav-tab-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        .nav-tab-link img:first-child {
+            opacity: 1;
+        }
+
+        .nav-tab-link img:last-child {
+            opacity: 0;
+        }
+
+        .nav-tab-link:hover img:first-child {
+            opacity: 0;
+        }
+
+        .nav-tab-link:hover img:last-child {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>  
+    <div class="nav-image-tabs">
+        <a href="index.html" class="nav-tab-link">
+            <img src="photos/home.png" alt="Home">
+            <img src="photos/home_hover.png" alt="Home Hover">
+        </a>
+        <a href="about.html" class="nav-tab-link">
+            <img src="photos/about.png" alt="About">
+            <img src="photos/about_hover.png" alt="About Hover">
+        </a>
+        <a href="projects.html" class="nav-tab-link">
+            <img src="photos/projects.png" alt="Projects">
+            <img src="photos/projects_hover.png" alt="Projects Hover">
+        </a>
+    </div>
+</body>
+</html>
