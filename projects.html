@@ -5,85 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin's Portfolio Website</title>
     <style> 
+        /* GLOBAL STYLES */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Acherus Militant Light', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        /* NAVIGATION (unchanged) */
         .nav-image-tabs {
-       display: flex;
-       width: min(600px, 90vw);
-       margin: 40px auto 20px; /* 👈 Increased top margin to 40px */
-       gap: 12px;
-       justify-content: center;
-   }
+            display: flex;
+            width: min(600px, 90vw);
+            margin: 40px auto 20px;
+            gap: 12px;
+            justify-content: center;
+        }
 
-   .nav-tab-link {
-       flex: 1;
-       max-width: 180px;
-       height: 50px;
-       border-radius: 8px;
-       overflow: hidden;
-       transition: transform 0.2s ease;
-       text-decoration: none;
-       display: block;
-       position: relative;
-   }
+        .nav-tab-link {
+            flex: 1;
+            max-width: 180px;
+            height: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            display: block;
+            position: relative;
+        }
 
-   .nav-tab-link:hover {
-       transform: scale(1.05);
-       z-index: 2;
-   }
+        .nav-tab-link:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
 
-   .nav-tab-link img {
-       width: 100%;
-       height: 100%;
-       object-fit: contain;
-       position: absolute;
-       top: 0;
-       left: 0;
-       transition: opacity 0.3s ease-in-out;
-       pointer-events: none;
-   }
+        .nav-tab-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease-in-out;
+            pointer-events: none;
+        }
 
-   .nav-tab-link img:first-child {
-       opacity: 1;
-   }
+        .nav-tab-link img:first-child {
+            opacity: 1;
+        }
 
-   .nav-tab-link img:last-child {
-       opacity: 0;
-   }
+        .nav-tab-link img:last-child {
+            opacity: 0;
+        }
 
-   .nav-tab-link:hover img:first-child {
-       opacity: 0;
-   }
+        .nav-tab-link:hover img:first-child {
+            opacity: 0;
+        }
 
-   .nav-tab-link:hover img:last-child {
-       opacity: 1;
-   }
-    /* Footer */
-    footer {
-            background-color: #000; /* Pure black */
+        .nav-tab-link:hover img:last-child {
+            opacity: 1;
+        }
+
+        @font-face {
+            font-family: 'Acherus Militant Light';
+            src: url('fonts/AcherusMilitant-Light.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* MAIN CONTENT CONTAINER */
+        .content-container {
+            width: min(1000px, 92vw); /* Slightly wider container to accommodate larger blocks */
+            margin: 0 auto 40px;
+        }
+
+        /* WRAPPER FOR EACH LEFT-RIGHT PAIR — INCREASED WIDTH */
+        .content-section {
+            width: 90%; /* ← INCREASED FROM 75% TO 90% — ADJUST HERE */
+            margin: 0 auto;
+            border-radius: 16px;
+            padding: 32px; /* Slightly more padding for balance */
+            background-color: rgba(255, 255, 255, 0.12);
+            box-sizing: border-box;
+        }
+
+        .block-row {
+            display: flex;
+            gap: 40px; /* Slightly more space between blocks */
+        }
+
+        .text-block, .image-block {
+            flex: 1;
+            min-height: 420px; /* ← INCREASED HEIGHT — ADJUST HERE */
+        }
+
+        .text-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-block h2 {
+            margin: 0 0 20px 0;
+            font-size: 32px; /* Slightly larger title */
+        }
+
+        .text-block p {
+            margin: 0;
+            font-size: 18px; /* Slightly larger body text */
+            line-height: 1.6;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .section-spacer {
+            height: 60px; /* Slightly more space between sections */
+        }
+
+        footer {
+            background-color: #000;
             color: #f6be4c;
             text-align: center;
             padding: 20px 0;
             width: 100%;
-            margin-top: auto; /* Pushes footer to bottom if content is short */
+            margin-top: auto;
         }
-</style>
+    </style>
 </head>
 <body>  
+    <!-- Navigation -->
     <div class="nav-image-tabs">
         <a href="index.html" class="nav-tab-link">
-          <img src="Photos/home.png" alt="Home">
-          <img src="Photos/home_hover.png" alt="Home Hover">
+            <img src="Photos/home.png" alt="Home">
+            <img src="Photos/home_hover.png" alt="Home Hover">
         </a>
         <a href="about.html" class="nav-tab-link">
-          <img src="Photos/about.png" alt="About">
-          <img src="Photos/about_hover.png" alt="About Hover">
+            <img src="Photos/about.png" alt="About">
+            <img src="Photos/about_hover.png" alt="About Hover">
         </a>
         <a href="projects.html" class="nav-tab-link">
-          <img src="Photos/projects.png" alt="Projects">
-          <img src="Photos/projects_hover.png" alt="Projects Hover">
+            <img src="Photos/projects.png" alt="Projects">
+            <img src="Photos/projects_hover.png" alt="Projects Hover">
         </a>
-      </div>
-      <footer>
-        <!-- You can add copyright, social links, etc. here later -->
+    </div>
+
+    <!-- Three Larger Sections -->
+    <div class="content-container">
+        <!-- Section 1 -->
+        <div class="content-section">
+            <div class="block-row">
+                <div class="text-block">
+                    <h2>Turing Project</h2>
+                    <p>This is a description of your first project. The blocks are now larger for greater visual impact and readability.</p>
+                </div>
+                <div class="image-block">
+                    <img src="https://via.placeholder.com/600x420" alt="Project Alpha Image">
+                </div>
+            </div>
+        </div>
+
+        <div class="section-spacer"></div>
+
+        <!-- Section 2 -->
+        <div class="content-section">
+            <div class="block-row">
+                <div class="text-block">
+                    <h2>Bionic Ankle</h2>
+                    <p>With increased dimensions, your content has more room to breathe while maintaining elegant proportions.</p>
+                </div>
+                <div class="image-block">
+                    <img src="https://via.placeholder.com/600x420" alt="Project Beta Image">
+                </div>
+            </div>
+        </div>
+
+        <div class="section-spacer"></div>
+
+        <!-- Section 3 -->
+        <div class="content-section">
+            <div class="block-row">
+                <div class="text-block">
+                    <h2>Earthquake Detection</h2>
+                    <p>Each section now feels more substantial and immersive—ideal for showcasing your work in depth.</p>
+                </div>
+                <div class="image-block">
+                    <img src="https://via.placeholder.com/600x420" alt="Project Gamma Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
         &copy; 2025 Justin Guo. All rights reserved.
     </footer>
 </body>

@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin's Portfolio Website</title>
     <style> 
+        @font-face {
+  font-family: 'Acherus Militant Light';
+  src: url('fonts/AcherusMilitant-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Improves loading behavior */
+}
         .nav-image-tabs {
        display: flex;
        width: min(600px, 90vw);
@@ -56,6 +63,104 @@
    .nav-tab-link:hover img:last-child {
        opacity: 1;
    }
+       /* Reset & base */
+       * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+    font-family: 'Acherus Militant Light', fantasy, serif;
+      background-color: #000;
+      line-height: 1.6;
+      padding: 20px;
+      color: #f6be4c;
+    }
+
+    /* Two-column layout */
+    .content-section {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+    }
+
+    /* Left block: 1/6 width */
+    .left-block {
+  flex: 1;
+  padding: 20px;
+  /* Remove centering — let text start at the top */
+  text-align: center;
+  font-weight: bold;
+  color: #f9d204;
+  /* Optional: ensure it aligns to top if right block is taller */
+  align-self: flex-start;
+}
+
+    /* Right block: 5/6 width */
+    .right-block {
+      flex: 5; /* 5 parts = 5/6 */
+      padding: 30px;
+    }
+
+    .right-block .big-title {
+      font-size: 10rem;
+      margin-bottom: 15px;
+      color: #f9d204;
+    }
+
+    .right-block .small-text {
+      font-size: 1rem;
+      color: #f9d204;
+      max-width: 800px;
+    }
+    .profile-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.profile-pic {
+  width: 700px;
+  height: 700px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.contact-title h2 {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-family: 'Acherus Militant Light', sans-serif;
+  font-size: 4rem;
+}
+
+.contact-info {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.contact-info h3 {
+  margin-bottom: 0.5rem;
+  font-family: 'Acherus Militant Light', sans-serif;
+  font-size: 2rem;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 2rem;
+  color: #f6be4c;
+}
+
+    /* Responsive: stack on small screens */
+    @media (max-width: 768px) {
+      .content-section {
+        flex-direction: column;
+      }
+
+      .left-block,
+      .right-block {
+        width: 100%;
+      }
+    }
     /* Footer */
     footer {
             background-color: #000; /* Pure black */
@@ -82,6 +187,36 @@
           <img src="Photos/projects_hover.png" alt="Projects Hover">
         </a>
       </div>
+      <div class="content-section">
+        <!-- Left Block (1/6) -->
+        <div class="left-block">
+          About Me
+        </div>
+    
+        <!-- Right Block (5/6) -->
+        <div class="right-block">
+          <div class="big-title">Hello, I'm Justin Guo</div>
+          <div class="small-text">
+            I'm a passionate researcher and developer exploring the intersection of artificial intelligence and human decision-making. My current focus is the Turing Project, which investigates behavioral signatures that distinguish human players from engines in competitive chess.
+          </div>
+        </div>
+      </div>
+      <!-- Profile Picture -->
+<div class="profile-section">
+    <img src="Photos/profile_pic.png" alt="Profile Picture" class="profile-pic">
+  </div>
+  
+  <!-- "Contact Me" Title -->
+  <div class="contact-title">
+    <h2>Contact Me</h2>
+  </div>
+  
+  <!-- Contact Info Block (with title and description) -->
+  <div class="contact-info">
+    <h3>Email</h3>
+    <p>justin.guo@example.com</p>
+  </div>
+  
       <footer>
         <!-- You can add copyright, social links, etc. here later -->
         &copy; 2025 Justin Guo. All rights reserved.
