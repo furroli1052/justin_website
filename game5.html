@@ -229,11 +229,11 @@
       </div>
       <div class="content-wrapper">
         <div class="text-block">
-            <h2>Game 1</h2>
-            <p>White maintained a slow but concise advantage through the Spanish Exchange Variation. Through trading down pieces and controlling important squares, Black maintained his advantage in a solid position. However, White did not risk pushing further, and made a draw with Black. Black played much wobbly, displaying some wrong risky decision making.</p>
+            <h2>Game 5</h2>
+            <p>White opened with the Spanish opening and left Black with a bad bishop. Trying the open up lines, Black pushed back, but ultimately failed at White’s defenses. With the good pieces, White rolled down Black with kingside pawns. </p> 
         </div>
         <div class="image-block">
-            <img src="Photos/Risk2Test1.png" alt="Game Screenshot or Concept Art">
+            <img src="Photos/Risk2Test5.png" alt="Game Screenshot or Concept Art">
         </div>
     </div>
 
@@ -242,14 +242,22 @@
                 <div class="grid-box">
                         <script>
                             // 在引入 JS 文件前定义全局变量
-                            const moves = 97;
-                            const risk_list = [['NA', 0, 'NA', 0], ['e4', 0.063, 'e4', 0.021], ['e5', 0.802, 'c5', 0.073], ['Nf3', 0.004, 'Nf3', 0.008], ['Nc6', 0.862, 'Nc6', 2.012], ['Bb5', 0.039, 'Bc4', 0.0], ['a6', 0.029, 'a6', 0.086], ['Ba4', 0.039, 'Ba4', 0.234], ['Nf6', 0.0, 'Nf6', 0.029], ['O-O', 88.893, 'O-O', 0.0], ['Be7', 0.001, 'b5', 0.014], ['Bxc6', 11.66, 'Re1', 0.0], ['dxc6', 0.002, 'dxc6', 0.0], ['Re1', 1.202, 'd3', 8.412], ['Nd7', 0.0, 'Nd7', 0.001], ['d4', 88.893, 'c3', 77.782], ['exd4', 0.002, 'exd4', 0.0], ['Qxd4', 1.824, 'Qxd4', 0.608], ['O-O', 0.0, 'O-O', 0.002], ['Bf4', 588.918, 'Nc3', 11.112], ['Nc5', 0.001, 'Nc5', 0.001], ['Qe3', 3.723, 'Qe3', 7.446], ['Bg4', 0.058, 'Ne6', 0.0], ['Nd4', 0.039, 'Nd4', 0.079], ['Qd7', 0.0, 'Qd7', 0.0], ['Nc3', 944.492, 'h3', 33.335], ['Rad8', 0.0, 'Rad8', 0.0], ['Nf5', 222.233, 'h3', 622.253], ['Ne6', 0.003, 'Bxf5', 0.0], ['Nxe7+', 0.31, 'Nxe7+', 3.718], ['Qxe7', 0.008, 'Qxe7', 0.029], ['Bg3', 0.0, 'Bg3', 3.08], ['Bh5', 477.802, 'Nd4', 22.223], ['f3', 0.0, 'f3', 0.001], ['f6', 300.015, 'Qb4', 22.223], ['h3', 0.002, 'a3', 0.001], ['h6', 12.786, 'Rd7', 1.827], ['Kh2', 0.005, 'a3', 0.001], ['Bf7', 1.72, 'Qb4', 0.0], ['Rad1', 0.199, 'a3', 0.007], ['b6', 0.141, 'Qb4', 0.025], ['a3', 0.042, 'f4', 0.008], ['a5', 0.725, 'Rxd1', 0.054], ['Ne2', 0.043, 'f4', 0.004], ['Rxd1', 0.079, 'Rfe8', 0.0], ['Rxd1', 0.015, 'Rxd1', 0.0], ['Rd8', 0.153, 'c5', 0.23], ['Rd3', 0.094, 'Rxd8+', 0.016], ['c5', 0.087, 'Rxd3', 0.025], ['Qd2', 0.413, 'Qd2', 0.226], ['c6', 0.501, 'Rxd3', 0.016], ['Rxd8+', 0.019, 'Rxd8+', 0.0], ['Nxd8', 0.0, 'Nxd8', 0.0], ['Qf4', 0.0, 'Qf4', 311.127], ['b5', 22.223, 'b5', 0.0], ['Qb8', 0.004, 'Qb8', 0.002], ['Kh7', 0.0, 'Kh7', 0.919], ['Bd6', 711.147, 'Bc7', 33.335], ['Qd7', 0.002, 'Qd7', 0.0], ['Ng3', 0.0, 'Ng3', 0.0], ['Ne6', 44.447, 'Ne6', 111.117], ['f4', 0.007, 'c3', 0.004], ['h5', 15.568, 'Nd4', 0.756], ['c3', 0.04, 'c3', 0.004], ['c4', 3.959, 'h4', 0.0], ['h4', 0.029, 'Nf5', 0.0], ['Qd8', 0.039, 'Qd8', 0.116], ['Qb7', 0.293, 'Qb7', 0.234], ['Be8', 0.0, 'Be8', 0.009], ['Nf5', 522.248, 'Nf5', 77.782], ['Qd7', 0.001, 'Qd7', 0.0], ['Qb8', 0.0, 'Qxd7', 2.745], ['Qd8', 788.928, 'a4', 355.573], ['Qxd8', 0.008, 'Qb7', 0.0], ['Nxd8', 0.689, 'Nxd8', 0.965], ['Nd4', 0.068, 'a4', 0.038], ['Nb7', 0.017, 'Nb7', 0.44], ['e5', 0.066, 'e5', 0.132], ['Kg8', 0.261, 'Bd7', 0.017], ['Kg3', 0.211, 'Bc7', 0.024], ['Bd7', 0.012, 'Bd7', 0.035], ['Bc7', 0.191, 'Bc7', 0.0], ['Nc5', 0.019, 'Kf7', 0.0], ['Bxa5', 2.34, 'Bxa5', 0.234], ['Kf7', 0.002, 'Kf7', 0.002], ['Bb4', 1.145, 'Bb4', 1.145], ['Nd3', 0.012, 'Nd3', 0.015], ['e6+', 0.0, 'e6+', 0.095], ['Bxe6', 0.0, 'Bxe6', 200.01], ['Nxc6', 0.0, 'Nxc6', 11.112], ['Bd7', 0.0, 'Bd7', 11.112], ['Nd4', 0.0, 'Nd4', 100.005], ['Nxb2', 566.695, 'f5', 0.0], ['Kf3', 0.002, 'f5', 0.0], ['Nd3', 26.334, 'f5', 0.0], ['g3', 0.012, 'Ke4', 0.0], ['Nc1', 2.677, 'f5', 0.892], ['Ke3', 0.239, 'Ke4', 0.009]]
-;
+                            const moves = 95;
+                            const risk_list = [['NA', 0, 'NA', 0], ['e4', 0.036, 'e4', 0.036], ['e5', 0.533, 'c5', 0.031], ['Nf3', 0.024, 'Nf3', 0.024], ['Nc6', 0.318, 'Nf6', 0.399], ['Bb5', 0.023, 'Bb5', 0.023], ['a6', 0.0, 'a6', 0.0], ['Ba4', 1.0, 'Ba4', 1.0], ['Nf6', 0.0, 'Nf6', 0.0], ['O-O', 1.0, 'O-O', 1.0], ['Be7', 0.023, 'Nxe4', 0.0], ['d3', 0.747, 'Re1', 0.987], ['b5', 0.0, 'b5', 0.0], ['Bb3', 1.0, 'Bb3', 1.0], ['d6', 0.001, 'O-O', 0.0], ['c3', 1.0, 'a4', 0.626], ['O-O', 0.003, 'O-O', 0.003], ['h3', 0.0, 'h3', 0.0], ['Bb7', 1.0, 'Be6', 1.0], ['a4', 0.003, 'Re1', 0.0], ['Na5', 0.964, 'Na5', 0.964], ['Ba2', 0.001, 'Bc2', 0.003], ['c5', 1.0, 'c5', 1.0], ['Bg5', 0.004, 'Na3', 0.01], ['h6', 1.0, 'd5', 0.654], ['Bxf6', 0.008, 'Bxf6', 0.008], ['Bxf6', 0.278, 'Bxf6', 0.278], ['axb5', 0.145, 'b4', 0.004], ['axb5', 0.041, 'axb5', 0.041], ['Nbd2', 0.218, 'Re1', 0.083], ['Nc6', 0.088, 'g6', 0.072], ['Bd5', 0.039, 'Bd5', 0.039], ['Rxa1', 0.0, 'Rxa1', 0.0], ['Qxa1', 1.0, 'Qxa1', 1.0], ['Qd7', 0.001, 'Qd7', 0.001], ['Re1', 0.0, 'Qd1', 0.958], ['Ra8', 1.0, 'Ne7', 1.0], ['Qd1', 0.001, 'Qd1', 0.001], ['Bd8', 1.0, 'Ne7', 0.834], ['Nf1', 0.004, 'Nf1', 0.004], ['Ne7', 1.0, 'Ra7', 0.95], ['Bxb7', 0.004, 'Bxb7', 0.004], ['Qxb7', 0.27, 'Qxb7', 0.27], ['Ne3', 0.018, 'Ne3', 0.018], ['Bb6', 1.0, 'Ra2', 0.0], ['h4', 0.017, 'Nh4', 0.003], ['Qc6', 1.0, 'Ra2', 0.368], ['h5', 0.004, 'h5', 0.004], ['c4', 0.984, 'c4', 0.984], ['d4', 0.028, 'd4', 0.028], ['exd4', 0.894, 'Rd8', 0.346], ['Nxd4', 0.0, 'Nxd4', 0.0], ['Qc5', 1.0, 'Qb7', 1.0], ['Qg4', 0.008, 'Qf3', 0.001], ['Qe5', 0.132, 'Qe5', 0.132], ['Nf3', 0.08, 'Nf3', 0.08], ['Qe6', 0.029, 'Qe6', 0.029], ['Nf5', 0.117, 'Nf5', 0.117], ['Nxf5', 0.292, 'Qf6', 0.07], ['exf5', 0.0, 'exf5', 0.0], ['Qf6', 1.0, 'Qd7', 0.0], ['Qe4', 0.001, 'Qe4', 0.001], ['Rb8', 0.994, 'Rb8', 0.994], ['Re2', 0.001, 'Re2', 0.001], ['Bc5', 0.0, 'Bc5', 0.0], ['g4', 1.0, 'g4', 1.0], ['Qd8', 0.002, 'Qd8', 0.002], ['Qd5', 1.0, 'Qd5', 1.0], ['Kf8', 0.036, 'b4', 0.016], ['Kf1', 0.995, 'Kh2', 0.0], ['Rc8', 0.063, 'Qc8', 0.004], ['Re4', 0.739, 'g5', 0.904], ['Rb8', 0.141, 'Ra8', 0.02], ['g5', 0.817, 'Kg2', 0.008], ['hxg5', 0.164, 'Qd7', 0.025], ['Rg4', 0.528, 'Rg4', 0.528], ['Ra8', 0.195, 'Qa5', 0.134], ['Nxg5', 0.0, 'Nxg5', 0.0], ['Ra1+', 0.0, 'Ra1+', 0.0], ['Ke2', 1.0, 'Kg2', 1.0], ['Qe7+', 0.002, 'Qe7+', 0.002], ['Ne4', 1.0, 'Ne4', 1.0], ['Qe8', 0.007, 'Qe8', 0.007], ['Kf3', 1.0, 'Kf3', 1.0], ['Qa8', 0.001, 'Qa8', 0.001], ['Qxa8+', 0.0, 'Qxa8+', 0.0], ['Rxa8', 0.0, 'Rxa8', 0.0], ['f6', 0.0, 'f6', 0.0], ['g6', 1.0, 'g6', 1.0], ['hxg6', 0.0, 'hxg6', 0.0], ['fxg6', 0.0, 'fxg6', 0.0], ['Rxg6', 0.0, 'Rxg6', 0.0], ['Ra2', 1.0, 'Ra2', 1.0], ['Kg4', 0.017, 'Kg4', 0.017], ['Rxb2', 0.0, 'Rxb2', 0.0], ['Rh6', 1.0, 'Rh6', 1.0]]
+
                         </script>
                         <script type="text/javascript" src="chessboard.js"></script>
-                        <script type="text/javascript"> var a732878574353856 = init_playboard("a732878574353856",8,8,"PRNBQKBNRPPPPPPPP________________________________pppppppprnbqkbnr0","e4_e5_Nf3_Nc6_Bb5_a6_Ba4_Nf6_O-O_Be7_Bxc6_dxc6_Re1_Nd7_d4_exd4_Qxd4_O-O_Bf4_Nc5_Qe3_Bg4_Nd4_Qd7_Nc3_Rad8_Nf5_Ne6_Nxe7+_Qxe7_Bg3_Bh5_f3_f6_h3_h6_Kh2_Bf7_Rad1_b6_a3_a5_Ne2_Rxd1_Rxd1_Rd8_Rd3_c5_Qd2_c6_Rxd8+_Nxd8_Qf4_b5_Qb8_Kh7_Bd6_Qd7_Ng3_Ne6_f4_h5_c3_c4_h4_Qd8_Qb7_Be8_Nf5_Qd7_Qb8_Qd8_Qxd8_Nxd8_Nd4_Nb7_e5_Kg8_Kg3_Bd7_Bc7_Nc5_Bxa5_Kf7_Bb4_Nd3_e6+_Bxe6_Nxc6_Bd7_Nd4_Nxb2_Kf3_Nd3_g3_Nc1_Ke3",
-                          "White",0,"");
-                        </script>
+
+                        <script type="text/javascript">
+//<![CDATA[
+var a145271684076004 = init_playboard(
+  "a145271684076004",8,8,
+  "PRNBQKBNRPPPPPPPP________________________________pppppppprnbqkbnr0",
+  "e4_e5_Nf3_Nc6_Bb5_a6_Ba4_Nf6_O-O_Be7_d3_b5_Bb3_d6_c3_O-O_h3_Bb7_a4_Na5_Ba2_c5_Bg5_h6_Bxf6_Bxf6_axb5_axb5_Nbd2_Nc6_Bd5_Rxa1_Qxa1_Qd7_Re1_Ra8_Qd1_Bd8_Nf1_Ne7_Bxb7_Qxb7_Ne3_Bb6_h4_Qc6_h5_c4_d4_exd4_Nxd4_Qc5_Qg4_Qe5_Nf3_Qe6_Nf5_Nxf5_exf5_Qf6_Qe4_Rb8_Re2_Bc5_g4_Qd8_Qd5_Kf8_Kf1_Rc8_Re4_Rb8_g5_hxg5_Rg4_Ra8_Nxg5_Ra1+_Ke2_Qe7+_Ne4_Qe8_Kf3_Qa8_Qxa8+_Rxa8_f6_g6_hxg6_fxg6_Rxg6_Ra2_Kg4_Rxb2_Rh6",
+  "White",0,"");
+//]]>
+</script>
+
                 </div>
                 
                 <div class="grid-box">

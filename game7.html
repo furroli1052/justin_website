@@ -229,11 +229,11 @@
       </div>
       <div class="content-wrapper">
         <div class="text-block">
-            <h2>Game 1</h2>
-            <p>White maintained a slow but concise advantage through the Spanish Exchange Variation. Through trading down pieces and controlling important squares, Black maintained his advantage in a solid position. However, White did not risk pushing further, and made a draw with Black. Black played much wobbly, displaying some wrong risky decision making.</p>
+            <h2>Game 7</h2>
+            <p>The surprise French Defense gave Black a advantage at first, but White retaliated back with moves that are not good but provide great pressure. Though Black made the correct decision in brilliant sacrificing moves, the position is ruined in terms of Black’s perspective. The pressure from White came down, resulting in time pressure that leads to 3 simple mistakes that gave away all of the advantage and lose the game. </p> 
         </div>
         <div class="image-block">
-            <img src="Photos/Risk2Test1.png" alt="Game Screenshot or Concept Art">
+            <img src="Photos/Risk2Test7.png" alt="Game Screenshot or Concept Art">
         </div>
     </div>
 
@@ -242,14 +242,21 @@
                 <div class="grid-box">
                         <script>
                             // 在引入 JS 文件前定义全局变量
-                            const moves = 97;
-                            const risk_list = [['NA', 0, 'NA', 0], ['e4', 0.063, 'e4', 0.021], ['e5', 0.802, 'c5', 0.073], ['Nf3', 0.004, 'Nf3', 0.008], ['Nc6', 0.862, 'Nc6', 2.012], ['Bb5', 0.039, 'Bc4', 0.0], ['a6', 0.029, 'a6', 0.086], ['Ba4', 0.039, 'Ba4', 0.234], ['Nf6', 0.0, 'Nf6', 0.029], ['O-O', 88.893, 'O-O', 0.0], ['Be7', 0.001, 'b5', 0.014], ['Bxc6', 11.66, 'Re1', 0.0], ['dxc6', 0.002, 'dxc6', 0.0], ['Re1', 1.202, 'd3', 8.412], ['Nd7', 0.0, 'Nd7', 0.001], ['d4', 88.893, 'c3', 77.782], ['exd4', 0.002, 'exd4', 0.0], ['Qxd4', 1.824, 'Qxd4', 0.608], ['O-O', 0.0, 'O-O', 0.002], ['Bf4', 588.918, 'Nc3', 11.112], ['Nc5', 0.001, 'Nc5', 0.001], ['Qe3', 3.723, 'Qe3', 7.446], ['Bg4', 0.058, 'Ne6', 0.0], ['Nd4', 0.039, 'Nd4', 0.079], ['Qd7', 0.0, 'Qd7', 0.0], ['Nc3', 944.492, 'h3', 33.335], ['Rad8', 0.0, 'Rad8', 0.0], ['Nf5', 222.233, 'h3', 622.253], ['Ne6', 0.003, 'Bxf5', 0.0], ['Nxe7+', 0.31, 'Nxe7+', 3.718], ['Qxe7', 0.008, 'Qxe7', 0.029], ['Bg3', 0.0, 'Bg3', 3.08], ['Bh5', 477.802, 'Nd4', 22.223], ['f3', 0.0, 'f3', 0.001], ['f6', 300.015, 'Qb4', 22.223], ['h3', 0.002, 'a3', 0.001], ['h6', 12.786, 'Rd7', 1.827], ['Kh2', 0.005, 'a3', 0.001], ['Bf7', 1.72, 'Qb4', 0.0], ['Rad1', 0.199, 'a3', 0.007], ['b6', 0.141, 'Qb4', 0.025], ['a3', 0.042, 'f4', 0.008], ['a5', 0.725, 'Rxd1', 0.054], ['Ne2', 0.043, 'f4', 0.004], ['Rxd1', 0.079, 'Rfe8', 0.0], ['Rxd1', 0.015, 'Rxd1', 0.0], ['Rd8', 0.153, 'c5', 0.23], ['Rd3', 0.094, 'Rxd8+', 0.016], ['c5', 0.087, 'Rxd3', 0.025], ['Qd2', 0.413, 'Qd2', 0.226], ['c6', 0.501, 'Rxd3', 0.016], ['Rxd8+', 0.019, 'Rxd8+', 0.0], ['Nxd8', 0.0, 'Nxd8', 0.0], ['Qf4', 0.0, 'Qf4', 311.127], ['b5', 22.223, 'b5', 0.0], ['Qb8', 0.004, 'Qb8', 0.002], ['Kh7', 0.0, 'Kh7', 0.919], ['Bd6', 711.147, 'Bc7', 33.335], ['Qd7', 0.002, 'Qd7', 0.0], ['Ng3', 0.0, 'Ng3', 0.0], ['Ne6', 44.447, 'Ne6', 111.117], ['f4', 0.007, 'c3', 0.004], ['h5', 15.568, 'Nd4', 0.756], ['c3', 0.04, 'c3', 0.004], ['c4', 3.959, 'h4', 0.0], ['h4', 0.029, 'Nf5', 0.0], ['Qd8', 0.039, 'Qd8', 0.116], ['Qb7', 0.293, 'Qb7', 0.234], ['Be8', 0.0, 'Be8', 0.009], ['Nf5', 522.248, 'Nf5', 77.782], ['Qd7', 0.001, 'Qd7', 0.0], ['Qb8', 0.0, 'Qxd7', 2.745], ['Qd8', 788.928, 'a4', 355.573], ['Qxd8', 0.008, 'Qb7', 0.0], ['Nxd8', 0.689, 'Nxd8', 0.965], ['Nd4', 0.068, 'a4', 0.038], ['Nb7', 0.017, 'Nb7', 0.44], ['e5', 0.066, 'e5', 0.132], ['Kg8', 0.261, 'Bd7', 0.017], ['Kg3', 0.211, 'Bc7', 0.024], ['Bd7', 0.012, 'Bd7', 0.035], ['Bc7', 0.191, 'Bc7', 0.0], ['Nc5', 0.019, 'Kf7', 0.0], ['Bxa5', 2.34, 'Bxa5', 0.234], ['Kf7', 0.002, 'Kf7', 0.002], ['Bb4', 1.145, 'Bb4', 1.145], ['Nd3', 0.012, 'Nd3', 0.015], ['e6+', 0.0, 'e6+', 0.095], ['Bxe6', 0.0, 'Bxe6', 200.01], ['Nxc6', 0.0, 'Nxc6', 11.112], ['Bd7', 0.0, 'Bd7', 11.112], ['Nd4', 0.0, 'Nd4', 100.005], ['Nxb2', 566.695, 'f5', 0.0], ['Kf3', 0.002, 'f5', 0.0], ['Nd3', 26.334, 'f5', 0.0], ['g3', 0.012, 'Ke4', 0.0], ['Nc1', 2.677, 'f5', 0.892], ['Ke3', 0.239, 'Ke4', 0.009]]
-;
+                            const moves = 74;
+                            const risk_list = [['NA', 0, 'NA', 0], ['e4', 0.466, 'd4', 0.0], ['e6', 0.116, 'c5', 0.003], ['d4', 0.09, 'd4', 0.09], ['d5', 0.013, 'd5', 0.013], ['Nd2', 0.949, 'Nc3', 0.254], ['c5', 0.003, 'c5', 0.003], ['Ngf3', 0.0, 'dxc5', 0.764], ['cxd4', 1.0, 'cxd4', 1.0], ['Nxd4', 0.005, 'exd5', 0.001], ['Nf6', 1.0, 'Nc6', 0.802], ['exd5', 0.007, 'e5', 0.005], ['Nxd5', 0.163, 'Nxd5', 0.163], ['N2f3', 0.036, 'N2f3', 0.036], ['Be7', 0.062, 'Be7', 0.062], ['Bc4', 0.074, 'Bd3', 0.092], ['Nc6', 0.687, 'Qc7', 0.016], ['Nxc6', 0.009, 'O-O', 0.004], ['bxc6', 0.349, 'bxc6', 0.349], ['O-O', 0.004, 'O-O', 0.004], ['O-O', 0.72, 'a5', 0.837], ['Qe2', 0.003, 'a4', 0.0], ['Bb7', 1.0, 'a5', 0.996], ['Bd3', 0.025, 'a4', 0.02], ['Qc7', 0.642, 'Nb4', 0.524], ['Qe4', 0.027, 'c4', 0.031], ['Nf6', 0.961, 'g6', 0.0], ['Qh4', 0.002, 'Qh4', 0.002], ['c5', 0.0, 'c5', 0.0], ['Bf4', 1.0, 'Bf4', 1.0], ['Qb6', 0.0, 'Qb6', 0.0], ['Ne5', 1.0, 'Ne5', 1.0], ['Rad8', 0.0, 'Rad8', 0.0], ['Rae1', 1.0, 'Rfe1', 0.0], ['g6', 0.025, 'Ba6', 0.001], ['Bg5', 0.967, 'Bh6', 0.0], ['Rd4', 0.004, 'Rd4', 0.004], ['Qh3', 1.0, 'Be4', 0.975], ['Qc7', 0.003, 'Qc7', 0.003], ['b3', 1.0, 'b3', 1.0], ['Nh5', 0.0, 'Nh5', 0.0], ['f4', 1.0, 'Bh6', 1.0], ['Bd6', 0.005, 'Bd6', 0.005], ['c3', 1.0, 'Bc4', 0.593], ['Nxf4', 0.001, 'Nxf4', 0.001], ['Bxf4', 1.0, 'Rxf4', 1.0], ['Rxf4', 0.0, 'Rxf4', 0.0], ['Rxf4', 1.0, 'Rxf4', 1.0], ['Bxe5', 0.002, 'Bxe5', 0.002], ['Rh4', 1.0, 'Rf2', 1.0], ['Rd8', 0.003, 'Rd8', 0.003], ['Be4', 0.0, 'Be4', 0.0], ['Bxe4', 1.0, 'Ba6', 0.0], ['Rhxe4', 0.0, 'Rhxe4', 0.0], ['Rd5', 1.0, 'Rd5', 1.0], ['Rh4', 0.015, 'Rf1', 0.001], ['Qd6', 1.0, 'Bf6', 0.412], ['Qe3', 0.049, 'Rhe4', 0.008], ['h5', 0.07, 'h5', 0.07], ['g3', 0.033, 'g3', 0.033], ['Bf6', 0.746, 'Bf6', 0.746], ['Rc4', 0.008, 'Rc4', 0.008], ['h4', 0.984, 'Bg5', 0.0], ['gxh4', 0.061, 'Qf4', 0.004], ['Rd2', 0.999, 'Be5', 0.648], ['Re2', 0.026, 'Qg3', 0.215], ['Rd3', 1.0, 'Rd5', 0.254], ['Qxc5', 0.057, 'Qxc5', 0.057], ['Rd1+', 0.869, 'Qxc5+', 0.08], ['Kg2', 0.038, 'Kg2', 0.038], ['Qd3', 0.288, 'Qd3', 0.288], ['Rf2', 0.548, 'Rf2', 0.548], ['Kg7', 0.227, 'Rd2', 0.09], ['Rcf4', 0.633, 'Rcf4', 0.633], ['Qxc3', 0.093, 'Qxc3', 0.093]]
+
                         </script>
                         <script type="text/javascript" src="chessboard.js"></script>
-                        <script type="text/javascript"> var a732878574353856 = init_playboard("a732878574353856",8,8,"PRNBQKBNRPPPPPPPP________________________________pppppppprnbqkbnr0","e4_e5_Nf3_Nc6_Bb5_a6_Ba4_Nf6_O-O_Be7_Bxc6_dxc6_Re1_Nd7_d4_exd4_Qxd4_O-O_Bf4_Nc5_Qe3_Bg4_Nd4_Qd7_Nc3_Rad8_Nf5_Ne6_Nxe7+_Qxe7_Bg3_Bh5_f3_f6_h3_h6_Kh2_Bf7_Rad1_b6_a3_a5_Ne2_Rxd1_Rxd1_Rd8_Rd3_c5_Qd2_c6_Rxd8+_Nxd8_Qf4_b5_Qb8_Kh7_Bd6_Qd7_Ng3_Ne6_f4_h5_c3_c4_h4_Qd8_Qb7_Be8_Nf5_Qd7_Qb8_Qd8_Qxd8_Nxd8_Nd4_Nb7_e5_Kg8_Kg3_Bd7_Bc7_Nc5_Bxa5_Kf7_Bb4_Nd3_e6+_Bxe6_Nxc6_Bd7_Nd4_Nxb2_Kf3_Nd3_g3_Nc1_Ke3",
-                          "White",0,"");
-                        </script>
+
+                        <script type="text/javascript">
+//<![CDATA[
+var a278442894322578 = init_playboard(
+  "a278442894322578",8,8,
+  "PRNBQKBNRPPPPPPPP________________________________pppppppprnbqkbnr0",
+  "e4_e6_d4_d5_Nd2_c5_Ngf3_cxd4_Nxd4_Nf6_exd5_Nxd5_N2f3_Be7_Bc4_Nc6_Nxc6_bxc6_O-O_O-O_Qe2_Bb7_Bd3_Qc7_Qe4_Nf6_Qh4_c5_Bf4_Qb6_Ne5_Rad8_Rae1_g6_Bg5_Rd4_Qh3_Qc7_b3_Nh5_f4_Bd6_c3_Nxf4_Bxf4_Rxf4_Rxf4_Bxe5_Rh4_Rd8_Be4_Bxe4_Rhxe4_Rd5_Rh4_Qd6_Qe3_h5_g3_Bf6_Rc4_h4_gxh4_Rd2_Re2_Rd3_Qxc5_Rd1+_Kg2_Qd3_Rf2_Kg7_Rcf4_Qxc3",
+  "White",0,"");
+//]]>
+</script>
                 </div>
                 
                 <div class="grid-box">
