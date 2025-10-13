@@ -13,7 +13,6 @@
     }
 
     body {
-      background-size: 1500px auto;
       background-color: #000000;
       min-height: 100vh;
       font-family: Arial, sans-serif;
@@ -70,12 +69,12 @@
     /* ===== TITLE PAGE ===== */
     .title-page {
       width: 100%;
-      height: 500px;
+      height: 400px;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f0f0f0;
+      background-color: #000000;
     }
 
     .title-page img {
@@ -86,76 +85,82 @@
       object-fit: contain;
     }
 
-    /* ===== NEW: SINGLE HEADER GRAPHIC (replaces hero + main-content + section) ===== */
+    /* ===== HEADER GRAPHIC ===== */
     .header-graphic {
       width: 100%;
       display: block;
-      margin-bottom: 40px;
+      margin: 0 auto 40px;
     }
 
-    /* ===== GALLERY ===== */
-    .gallery {
+    @font-face {
+      font-family: 'Acherus Militant Light';
+      src: url('fonts/AcherusMilitant-Light.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== BUTTON GALLERY (3-COLUMN GRID) ===== */
+    .gallery-buttons {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 0 20px 40px;
+      gap: 16px;
+      width: min(75vw, 900px); /* ~3/4 screen, max 900px */
+      margin: 0 auto 40px;
+      padding: 0 12px;
     }
 
-    .gallery-item {
-      background: white;
-      border: 1px solid #eee;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .gallery-item img {
+    .gallery-button {
       width: 100%;
-      height: 150px;
-      object-fit: cover;
-      display: block;
+      padding: 10px 16px; /* reduced height, good side padding */
+      font-size: 1rem;
+      background-color: #222;
+      color: #f6be4c;
+      border: 1px solid #444;
+      border-radius: 6px;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s, transform 0.15s;
     }
 
-    .gallery-item p {
-      margin-top: 8px;
-      font-size: 0.9rem;
+    .gallery-button:hover {
+      background-color: #333;
+      transform: translateY(-2px);
     }
 
-    /* ===== LARGE TITLE BLOCK ===== */
-    .header-graphic {
-  width: 100%;
-  display: block;
-  margin-bottom: 40px;
-}
-@font-face {
-  font-family: 'Acherus Militant Light';
-  src: url('fonts/AcherusMilitant-Light.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; /* Improves loading behavior */
-}
- /* Footer */
- footer {
-            background-color: #000; /* Pure black */
-            color: #f6be4c;
-            text-align: center;
-            padding: 20px 0;
-            width: 100%;
-            margin-top: auto; /* Pushes footer to bottom if content is short */
-        }
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #000;
+      color: #f6be4c;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+      margin-top: auto;
+    }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      .final-section {
-        flex-direction: column;
-      }
-      .gallery {
+      .gallery-buttons {
         grid-template-columns: repeat(2, 1fr);
+        width: min(85vw, 700px);
+      }
+      .gallery-button {
+        padding: 10px 12px;
+        font-size: 0.95rem;
       }
     }
 
     @media (max-width: 480px) {
-      .gallery {
+      .gallery-buttons {
         grid-template-columns: 1fr;
+        width: 90vw;
+      }
+      .gallery-button {
+        padding: 12px 16px;
+        font-size: 1rem;
       }
     }
   </style>
@@ -178,38 +183,39 @@
     </a>
   </div>
 
-  <!-- Title Page (KEEP) -->
+  <!-- Title Page -->
   <div class="title-page">
-    <img src="Photos/Turing_Project_Title_2.png" alt="Title Graphic">
+    <img src="Photos/Turing_Project_Title.png" alt="Title Graphic">
   </div>
 
-  <!-- ✅ SINGLE HEADER GRAPHIC (REPLACES hero + main-content + section-with-bg) -->
+  <!-- Header Graphic -->
   <img src="Photos/Goal of Turing Project.png" alt="Turing Project Overview" class="header-graphic">
 
-  <!-- ✅ KEEP: Gallery (Game 1 to Game 14 + The Whole Set) -->
-  <div class="gallery">
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 1"><p>Game 1</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 2"><p>Game 2</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 3"><p>Game 3</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 4"><p>Game 4</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 5"><p>Game 5</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 6"><p>Game 6</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 7"><p>Game 7</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 8"><p>Game 8</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 9"><p>Game 9</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 10"><p>Game 10</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 11"><p>Game 11</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 12"><p>Game 12</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 13"><p>Game 13</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="Game 14"><p>Game 14</p></div>
-    <div class="gallery-item"><img src="placeholder.jpg" alt="The Whole Set"><p>The Whole Set</p></div>
+  <!-- ✅ 3-COLUMN BUTTON GRID -->
+  <div class="gallery-buttons">
+    <a href="game1.html" class="gallery-button">Game 1</a>
+    <a href="game2.html" class="gallery-button">Game 2</a>
+    <a href="game3.html" class="gallery-button">Game 3</a>
+    <a href="game4.html" class="gallery-button">Game 4</a>
+    <a href="game5.html" class="gallery-button">Game 5</a>
+    <a href="game6.html" class="gallery-button">Game 6</a>
+    <a href="game7.html" class="gallery-button">Game 7</a>
+    <a href="game8.html" class="gallery-button">Game 8</a>
+    <a href="game9.html" class="gallery-button">Game 9</a>
+    <a href="game10.html" class="gallery-button">Game 10</a>
+    <a href="game11.html" class="gallery-button">Game 11</a>
+    <a href="game12.html" class="gallery-button">Game 12</a>
+    <a href="game13.html" class="gallery-button">Game 13</a>
+    <a href="game14.html" class="gallery-button">Game 14</a>
+    <a href="whole-set.html" class="gallery-button">The Whole Set</a>
   </div>
 
-    <!-- ✅ NEW: SINGLE IMAGE REPLACING ALL CONTENT AFTER GALLERY -->
-    <img src="Photos/2.png" alt="Turing Project Full Summary" class="header-graphic">
-    <footer>
-        <!-- You can add copyright, social links, etc. here later -->
-        &copy; 2025 Justin Guo. All rights reserved.
-    </footer>
+  <!-- Final Summary Graphic -->
+  <img src="Photos/2.png" alt="Turing Project Full Summary" class="header-graphic">
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Justin Guo. All rights reserved.
+  </footer>
 </body>
 </html>

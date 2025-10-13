@@ -11,7 +11,7 @@
             padding: 0;
             font-family: 'Acherus Militant Light', sans-serif;
             background-color: #121212;
-            color: #f0f0f0;
+            color: #f6be4c;
         }
 
         /* NAVIGATION (unchanged) */
@@ -77,28 +77,27 @@
 
         /* MAIN CONTENT CONTAINER */
         .content-container {
-            width: min(1000px, 92vw); /* Slightly wider container to accommodate larger blocks */
+            width: min(1000px, 92vw);
             margin: 0 auto 40px;
         }
 
-        /* WRAPPER FOR EACH LEFT-RIGHT PAIR — INCREASED WIDTH */
         .content-section {
-            width: 90%; /* ← INCREASED FROM 75% TO 90% — ADJUST HERE */
+            width: 90%;
             margin: 0 auto;
             border-radius: 16px;
-            padding: 32px; /* Slightly more padding for balance */
+            padding: 32px;
             background-color: rgba(255, 255, 255, 0.12);
             box-sizing: border-box;
         }
 
         .block-row {
             display: flex;
-            gap: 40px; /* Slightly more space between blocks */
+            gap: 40px;
         }
 
         .text-block, .image-block {
             flex: 1;
-            min-height: 420px; /* ← INCREASED HEIGHT — ADJUST HERE */
+            min-height: 420px;
         }
 
         .text-block {
@@ -107,14 +106,53 @@
             justify-content: center;
         }
 
-        .text-block h2 {
+        /* PROJECT TITLE IMAGE STYLES */
+        .project-title-image {
+            position: relative;
+            width: fit-content;
             margin: 0 0 20px 0;
-            font-size: 32px; /* Slightly larger title */
+            transition: transform 0.3s ease;
         }
 
+        .title-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .title-img.default {
+            opacity: 1;
+        }
+
+        .title-img.hover {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 105%;
+            height: 105%;
+            transform: translate(-2.5%, -2.5%);
+            pointer-events: none;
+        }
+
+        .project-title-image:hover {
+            transform: scale(1.05);
+            z-index: 3;
+        }
+
+        .project-title-image:hover .title-img.default {
+            opacity: 0;
+        }
+
+        .project-title-image:hover .title-img.hover {
+            opacity: 1;
+        }
+
+        /* BODY TEXT */
         .text-block p {
             margin: 0;
-            font-size: 18px; /* Slightly larger body text */
+            font-size: 18px;
             line-height: 1.6;
         }
 
@@ -127,7 +165,7 @@
         }
 
         .section-spacer {
-            height: 60px; /* Slightly more space between sections */
+            height: 60px;
         }
 
         footer {
@@ -138,6 +176,22 @@
             width: 100%;
             margin-top: auto;
         }
+
+        /* Optional: Respect user motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            .project-title-image,
+            .title-img {
+                transition: none !important;
+                transform: none !important;
+            }
+        }
+
+        .project-title-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
     </style>
 </head>
 <body>  
@@ -163,8 +217,13 @@
         <div class="content-section">
             <div class="block-row">
                 <div class="text-block">
-                    <h2>Turing Project</h2>
-                    <p>This is a description of your first project. The blocks are now larger for greater visual impact and readability.</p>
+                    <a href="turing_project.html" class="project-title-link">
+                        <div class="project-title-image">
+                            <img src="Photos/Turing_Project.png" alt="Turing Project" class="title-img default">
+                            <img src="Photos/Turing_Project_Hover.png" alt="Turing Project" class="title-img hover">
+                        </div>
+                    </a>
+                    <p>A project that aims to understand the difference between chess engines and human chess players to solve the problem of cheating.</p>
                 </div>
                 <div class="image-block">
                     <img src="https://via.placeholder.com/600x420" alt="Project Alpha Image">
@@ -178,8 +237,14 @@
         <div class="content-section">
             <div class="block-row">
                 <div class="text-block">
-                    <h2>Bionic Ankle</h2>
-                    <p>With increased dimensions, your content has more room to breathe while maintaining elegant proportions.</p>
+                    <a href="bionic_ankle.html" class="project-title-link">
+                        <div class="project-title-image">
+                            <img src="Photos/Bionic_Ankle.png" alt="Bionic Ankle" class="title-img default">
+                            <img src="Photos/Bionic_Ankle_Hover.png" alt="Bionic Ankle" class="title-img hover">
+                        </div>
+                    </a>
+                    <p>A engineer project that formulates a 2 degrees of freedom, self-adpative bionic ankle for robots and disabled people.
+                    </p>
                 </div>
                 <div class="image-block">
                     <img src="https://via.placeholder.com/600x420" alt="Project Beta Image">
@@ -193,8 +258,13 @@
         <div class="content-section">
             <div class="block-row">
                 <div class="text-block">
-                    <h2>Earthquake Detection</h2>
-                    <p>Each section now feels more substantial and immersive—ideal for showcasing your work in depth.</p>
+                    <a href="earthquake_detection.html" class="project-title-link">
+                        <div class="project-title-image">
+                            <img src="Photos/Earthquake_Detection.png" alt="Earthquake Detection" class="title-img default">
+                            <img src="Photos/Earthquake_Detection_Hover.png" alt="Earthquake Detection" class="title-img hover">
+                        </div>
+                    </a>
+                    <p>A mini-project that aims to use AI to predict earthquakes' position and magnitude</p>
                 </div>
                 <div class="image-block">
                     <img src="https://via.placeholder.com/600x420" alt="Project Gamma Image">
